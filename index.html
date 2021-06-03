@@ -9,15 +9,16 @@
     <link rel="prefetch" href="nosotros.html" as="document">
 
     <!-- Fuentes -->
+    <!-- preload de fuente -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- preload -->
-    <link rel="preload" href="css/normalize.css">
+    <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
 
-    <link rel="preload" href="css/style.css">
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
     
     <title>Document</title>
@@ -47,7 +48,9 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
+                    <!-- optimizando imagenes para la web -->
                     <picture>
+                        <!-- con sourece le decimos que si lo soporta lo use -->
                         <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
                         <img src="img/blog1.jpg" alt="imagen blog" loading="lazy">
                     </picture>
@@ -132,5 +135,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/modernizer.js"></script>
 </body>
 </html>
